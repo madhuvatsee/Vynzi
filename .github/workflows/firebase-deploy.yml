@@ -1,0 +1,32 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # - name: Set up Node.js
+    #   uses: actions/setup-node@v2
+    #   with:
+    #     node-version: '16' # Use the Node.js version compatible with your Firebase setup
+
+    # - name: Install dependencies
+    #   run: npm install
+
+    # - name: Build project
+    #   run: npm run build # Adjust this if your build command is different
+
+    - name: Deploy to Firebase
+      env:
+        FIREBASE_TOKEN: ${{ 1//0gGrLZ8TVJlZ9CgYIARAAGBASNwF-L9IrqbuzOdOUGGr2mD8af3zVB0RYsp4rw04Qrxxq8MXeFL8tqHpGq__X5FOs0m7OWM9ZKNQ }}
+      run: |
+        npm install -g firebase-tools
+        firebase deploy --only hosting # Adjust this if deploying more than hosting
