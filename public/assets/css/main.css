@@ -12,9 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Jost", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font:'Roboto', sans-serif;
+  --heading-font: 'Roboto',  sans-serif;
+  --nav-font: 'Roboto',  sans-serif;
 }
 
 /* Global Colors */
@@ -80,7 +80,12 @@ a {
   transition: 0.3s;
 }
 
-a:hover {
+/* a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+} */
+
+.highliteronhover>li>a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
@@ -116,9 +121,18 @@ h6 {
   z-index: 9999;
 }
 .aboutUscolor1{
-  color: var(--heading-color);
+  color: #fed100;
   text-align: justify;
   font-weight: 500;
+}
+.minborder_nocolor{
+  border-radius: 15px;
+  padding: 10px;
+}
+.minborder{
+  border: 1px solid #fed100;
+  border-radius: 15px;
+  padding: 10px;
 }
 .aboutUscolor{
   color: var(--default-color);
@@ -188,6 +202,7 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   --heading-color: #ffffff;
   --nav-color: #ffffff;
+  border-bottom: 3px solid #FDB913;
 }
 
 /* Index Page Header on Scroll
@@ -2260,6 +2275,15 @@ section,
 .indIcons{
   width: 60%;
 }
+.newPadd > a{
+  padding: 5px;
+}
+.lnkedImg{
+  font-size: 15px;
+}
+.lnkedImg> svg{
+  width: 15px
+}
 @media (min-width: 576px) {
   .banerSection:before {
       background: -webkit-linear-gradient(left, rgba(0, 45, 98, .8) .24%, rgba(0, 45, 98, .7) 24.28%, rgba(0, 45, 98, .7) 90.47%, rgba(0, 45, 98, .5) 101.18%, rgba(0, 45, 98, 0) 102.32%);
@@ -2280,7 +2304,10 @@ section,
 @media (min-width: 992px) {
   .banerSection:before {
       background: -webkit-linear-gradient(left, rgba(0, 45, 98, .8) .05%, rgba(0, 45, 98, .7) 22.9%, rgba(0, 45, 98, .7) 66.32%, rgba(0, 45, 98, .5) 74.98%, rgba(0, 45, 98, 0) 97.1%);
-      background: linear-gradient(90deg, rgba(0, 45, 98, .8) .05%, rgba(0, 45, 98, .7) 22.9%, rgba(0, 45, 98, .7) 66.32%, rgba(0, 45, 98, .5) 74.98%, rgba(0, 45, 98, 0) 97.1%);
+      /* background: linear-gradient(90deg, rgba(0, 45, 98, .8) .05%, rgba(0, 45, 98, .7) 22.9%, rgba(0, 45, 98, .7) 66.32%, rgba(0, 45, 98, .5) 74.98%, rgba(0, 45, 98, 0) 97.1%); */
+
+      background: linear-gradient(90deg, rgba(0, 45, 98, .8) .05%, rgba(0, 45, 98, .7) 22.9%, transparent, transparent, transparent);
+
   }
 }
 

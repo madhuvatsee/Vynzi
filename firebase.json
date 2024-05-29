@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public ",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,9 +9,14 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "index.html"
       }
-    ]
+    ],
+    "redirects": [ {
+      "source": "/foo",
+      "destination": "/bar",
+      "type": 301
+    } ]
   },
   "emulators": {
     "hosting": {
@@ -21,5 +26,8 @@
       "enabled": true
     },
     "singleProjectMode": true
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
   }
 }
